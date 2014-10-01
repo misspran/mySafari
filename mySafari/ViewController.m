@@ -8,14 +8,24 @@
 
 #import "ViewController.h"
 
-@interface ViewController () < UIWebViewDelegate>
+@interface ViewController () < UIWebViewDelegate, UITextFieldDelegate >
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UITextField *urlTextField;
+
 
 @end
 
 @implementation ViewController
 
+-(BOOL)textFieldShouldReturn:(UITextField *)urltextField {
+    NSString *urlString = urltextField.text;
+    NSURL *url =[NSURL URLWithString:urlString];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:urlRequest];
+    return YES;
+
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,32 +20,62 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PVY-CK-xgy">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
-                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="R8t-eV-djx"/>
                                 </connections>
                             </webView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Y8-Er-4aN">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL" keyboardAppearance="alert" returnKeyType="go"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="50" y="160" width="322" height="30"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="Rgf-Xs-YQn"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PVY-CK-xgy" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="3dj-TC-5eb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PVY-CK-xgy" secondAttribute="trailing" constant="-16" id="HaN-Nr-o1S"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="PVY-CK-xgy" secondAttribute="bottom" id="TzS-Fl-ngF"/>
+                            <constraint firstItem="PVY-CK-xgy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="qxu-WQ-skY"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="PVY-CK-xgy"/>
+                                <exclude reference="0Y8-Er-4aN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3dj-TC-5eb"/>
+                                <exclude reference="HaN-Nr-o1S"/>
+                                <exclude reference="qxu-WQ-skY"/>
+                                <exclude reference="TzS-Fl-ngF"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="PVY-CK-xgy"/>
+                                <include reference="0Y8-Er-4aN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3dj-TC-5eb"/>
+                                <include reference="HaN-Nr-o1S"/>
+                                <include reference="qxu-WQ-skY"/>
+                                <include reference="TzS-Fl-ngF"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="urlTextField" destination="0Y8-Er-4aN" id="gkE-u0-egV"/>
                         <outlet property="webView" destination="PVY-CK-xgy" id="R8B-H1-bnm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="111" y="155"/>
         </scene>
     </scenes>
 </document>
