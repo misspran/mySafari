@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -45,7 +45,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="127" y="46" width="30" height="30"/>
+                                            <rect key="frame" x="24" y="46" width="30" height="30"/>
                                         </variation>
                                         <connections>
                                             <action selector="onBackButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7s4-tK-Rzo"/>
@@ -57,7 +57,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="156" y="46" width="30" height="30"/>
+                                            <rect key="frame" x="51" y="46" width="30" height="30"/>
                                         </variation>
                                         <connections>
                                             <action selector="onForwardButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sqW-7a-XzC"/>
@@ -69,7 +69,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="211" y="46" width="30" height="30"/>
+                                            <rect key="frame" x="250" y="46" width="30" height="30"/>
                                         </variation>
                                         <connections>
                                             <action selector="onStopLoadingButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="V61-Be-LiV"/>
@@ -81,10 +81,22 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="243" y="46" width="49" height="30"/>
+                                            <rect key="frame" x="79" y="46" width="49" height="30"/>
                                         </variation>
                                         <connections>
                                             <action selector="onReloadButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aRk-GO-RWi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgA-07-ytm">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="172" y="46" width="30" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="onAddButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NAN-aV-jh0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -95,6 +107,7 @@
                                         <exclude reference="VaA-pJ-5En"/>
                                         <exclude reference="ueg-nn-3mt"/>
                                         <exclude reference="wK3-l8-Pp8"/>
+                                        <exclude reference="FgA-07-ytm"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -104,6 +117,7 @@
                                         <include reference="VaA-pJ-5En"/>
                                         <include reference="ueg-nn-3mt"/>
                                         <include reference="wK3-l8-Pp8"/>
+                                        <include reference="FgA-07-ytm"/>
                                     </mask>
                                 </variation>
                             </view>

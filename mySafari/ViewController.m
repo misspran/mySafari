@@ -20,6 +20,7 @@
 
 -(BOOL)textFieldShouldReturn:(UITextField *)urltextField {
     NSString *urlString = urltextField.text;
+    
     NSURL *url =[NSURL URLWithString:urlString];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:urlRequest];
@@ -47,6 +48,7 @@
 - (IBAction)onReloadButtonPressed:(id)sender {
     [self.webView reload];
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
