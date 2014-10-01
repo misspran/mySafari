@@ -25,8 +25,11 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="R8t-eV-djx"/>
                                 </connections>
                             </webView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Y8-Er-4aN">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter URL" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="0Y8-Er-4aN">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" searchField="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="URL" keyboardAppearance="alert" returnKeyType="go"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -87,16 +90,16 @@
                                             <action selector="onReloadButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aRk-GO-RWi"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgA-07-ytm">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iI0-TC-AiS">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <state key="normal" title="+">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="172" y="46" width="30" height="30"/>
+                                            <rect key="frame" x="174" y="46" width="30" height="30"/>
                                         </variation>
                                         <connections>
-                                            <action selector="onAddButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NAN-aV-jh0"/>
+                                            <action selector="onAddButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1MX-FE-Jho"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -107,7 +110,7 @@
                                         <exclude reference="VaA-pJ-5En"/>
                                         <exclude reference="ueg-nn-3mt"/>
                                         <exclude reference="wK3-l8-Pp8"/>
-                                        <exclude reference="FgA-07-ytm"/>
+                                        <exclude reference="iI0-TC-AiS"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -117,7 +120,7 @@
                                         <include reference="VaA-pJ-5En"/>
                                         <include reference="ueg-nn-3mt"/>
                                         <include reference="wK3-l8-Pp8"/>
-                                        <include reference="FgA-07-ytm"/>
+                                        <include reference="iI0-TC-AiS"/>
                                     </mask>
                                 </variation>
                             </view>

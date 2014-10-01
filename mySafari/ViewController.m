@@ -25,8 +25,10 @@
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:urlRequest];
     return YES;
-
 }
+
+
+
 
 -(void)webViewDidStartLoad:(UIWebView *)webView {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
@@ -48,7 +50,14 @@
 - (IBAction)onReloadButtonPressed:(id)sender {
     [self.webView reload];
 }
+- (IBAction)onAddButtonPressed:(id)sender {
+    UIAlertView *alertView = [[UIAlertView alloc] init];
+    alertView.title = @"Coming soon!";
+    [alertView addButtonWithTitle:@"Awesome!"];
+    [alertView show];
+}
 
+webView.request.url.absolutestring
 
 - (void)viewDidLoad {
     [super viewDidLoad];
