@@ -38,6 +38,15 @@
     [self.webView goBack];
 
 }
+- (IBAction)onForwardButtonPressed:(id)sender {
+    [self.webView goForward];
+}
+- (IBAction)onStopLoadingButtonPressed:(id)sender {
+    [self.webView stopLoading];
+}
+- (IBAction)onReloadButtonPressed:(id)sender {
+    [self.webView reload];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
