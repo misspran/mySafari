@@ -20,6 +20,9 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PVY-CK-xgy">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="48" y="66" width="317" height="349"/>
+                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="R8t-eV-djx"/>
                                 </connections>
@@ -29,12 +32,41 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="URL" keyboardAppearance="alert" returnKeyType="go"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="50" y="160" width="322" height="30"/>
+                                    <rect key="frame" x="45" y="28" width="322" height="30"/>
                                 </variation>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="Rgf-Xs-YQn"/>
                                 </connections>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xj3-gn-N8E">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PsP-eZ-bqv">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="&lt;">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="127" y="46" width="30" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="onBackButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7s4-tK-Rzo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="PsP-eZ-bqv"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="48" y="444" width="319" height="122"/>
+                                    <mask key="subviews">
+                                        <include reference="PsP-eZ-bqv"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -47,6 +79,7 @@
                             <mask key="subviews">
                                 <exclude reference="PVY-CK-xgy"/>
                                 <exclude reference="0Y8-Er-4aN"/>
+                                <exclude reference="xj3-gn-N8E"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="3dj-TC-5eb"/>
@@ -59,6 +92,7 @@
                             <mask key="subviews">
                                 <include reference="PVY-CK-xgy"/>
                                 <include reference="0Y8-Er-4aN"/>
+                                <include reference="xj3-gn-N8E"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="3dj-TC-5eb"/>
